@@ -1,0 +1,26 @@
+server:
+  port: 8080
+  error:
+    include-binding-errors: always
+    include-message: always
+    include-stacktrace: never
+
+spring:
+  application:
+    name: SpringSecurityJwt
+  datasource:
+    url: jdbc:postgresql://localhost:5432/jwt_db
+    username: techpro
+    password: password
+  jpa:
+    show_sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL9Dialect
+        format_sql: true
+  security:
+    user:
+      name: admin
+      password: password
